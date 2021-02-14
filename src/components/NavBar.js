@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 function NavBar() {
   return (
@@ -14,9 +15,9 @@ function NavBar() {
                     <Link class="navbar-brand" to="/">
                         Evvan's Demo React Site
                     </Link>
-                    <Link class="nav-link" to="/">
+                    <HashLink class="nav-link" to="/#about">
                         About
-                    </Link>
+                    </HashLink>
                     <Link class="nav-link" to="/calculator">
                         Calculator
                     </Link>
