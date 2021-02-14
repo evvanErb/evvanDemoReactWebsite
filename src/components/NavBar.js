@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 function NavBar() {
@@ -13,10 +13,16 @@ function NavBar() {
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav mx-auto">
                     <Link class="navbar-brand" to="/">
-                        Evvan's Demo React Site
+                        Evvan Erb's Site
                     </Link>
                     <HashLink class="nav-link" to="/#about">
                         About
+                    </HashLink>
+                    <HashLink class="nav-link" to="/#skills">
+                        Skills
+                    </HashLink>
+                    <HashLink class="nav-link" to="/#experience">
+                        Experience
                     </HashLink>
                     <Link class="nav-link" to="/calculator">
                         Calculator
