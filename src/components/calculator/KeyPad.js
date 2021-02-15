@@ -7,7 +7,7 @@ class KeyPad extends Component {
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-1 mb-4">
-                        <button name="%" class="btn btn-dark" style={{ height: "75px", width: "75px" }} >%</button>
+                        <button name="%" class="btn btn-dark" style={{ fontSize: "30px", height: "75px", width: "75px" }} >%</button>
                     </div>
                     <div class="col-md-1 mb-4">
                         <button name="CE" class="btn btn-dark" style={{ height: "75px", width: "75px" }} >CE</button>
