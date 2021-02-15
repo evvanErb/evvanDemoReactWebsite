@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Footer extends Component {
   render() {
       return (
-        <div className="Footer">
+        <div className="Footer" style={{ bottom: "0", position: "fixed", width: "100%" }}>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
