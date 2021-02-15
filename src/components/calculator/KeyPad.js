@@ -3,40 +3,79 @@ import React, {Component} from 'react';
 class KeyPad extends Component {
     render() {
       return (
-        <div className="KeyPad justify-content-center text-center">
+        <div className="KeyPad">
             <div class="container">
-                <div class="row">
-                    <button class="col-sm">%</button>
-                    <button class="col-sm">CE</button>
-                    <button class="col-sm">+/-</button>
-                    <button class="col-sm">C</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-1 mb-4">
+                        <button name="%" class="btn btn-dark" style={{ height: "75px", width: "75px" }} >%</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button name="CE" class="btn btn-dark" style={{ height: "75px", width: "75px" }} >CE</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >+/-</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >C</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <button class="col-sm">1</button>
-                    <button class="col-sm">2</button>
-                    <button class="col-sm">3</button>
-                    <button class="col-sm">+</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >1</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >2</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >3</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >+</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <button class="col-sm">4</button>
-                    <button class="col-sm">5</button>
-                    <button class="col-sm">6</button>
-                    <button class="col-sm">-</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >4</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >5</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >6</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >-</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <button class="col-sm">7</button>
-                    <button class="col-sm">8</button>
-                    <button class="col-sm">9</button>
-                    <button class="col-sm">*</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >7</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >8</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >9</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >*</button>
+                    </div>
                 </div>
-                <div class="row">
-                    <button class="col-sm">.</button>
-                    <button class="col-sm">0</button>
-                    <button class="col-sm">=</button>
-                    <button class="col-sm">/</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >.</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >0</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >=</button>
+                    </div>
+                    <div class="col-md-1 mb-4">
+                        <button class="btn btn-dark" style={{ height: "75px", width: "75px" }} >/</button>
+                    </div>
                 </div>
             </div>
-            <br /><br /><br /><br /><br />
         </div>
       );
     }

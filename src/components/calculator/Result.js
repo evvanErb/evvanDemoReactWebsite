@@ -6,6 +6,7 @@ class Result extends Component{
         <div className="Result" class="justify-content-center text-center">
             <br /><br /><br /><br /><br />
             Result
+            <br /><br /><br /><br />
         </div>
       );
     }
