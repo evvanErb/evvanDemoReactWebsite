@@ -5,14 +5,26 @@ import Result from "./Result"
 
 class Calculator extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this.handeNewInput = this.handeNewInput.bind(this)
+        this.state = {input: "0"};
+      }
+
+    calculate(val) {
+        return this.state.input + val;
+    }
+
     handeNewInput(val) {
-        console.log(val);
+        var value = this.calculate(val);
+        this.setState({input: value});
     }
 
   render() {
       return (
         <div className="Calculator">
-            <Result />
+            <Result value={this.state.input}/>
             <KeyPad onButtonPress={this.handeNewInput} />
         </div>
       );
