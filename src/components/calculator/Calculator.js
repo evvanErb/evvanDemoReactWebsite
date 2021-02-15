@@ -13,7 +13,37 @@ class Calculator extends Component {
       }
 
     calculate(val) {
-        return this.state.input + val;
+
+        if (/^\d+$/.test(val) || val === "+" || val === "-" || val === "*" || val === "/") {
+            if (this.state.input === "0") {
+                return val;
+            }
+            else {
+                return this.state.input + val;
+            }
+        }
+
+        else if (val === "=") {
+            return eval(this.state.input).toString();
+        }
+
+        else if (val === "CE") {
+            return "0";
+        }
+
+        else if (val === "%") {
+
+        }
+
+        else if (val === "+/-") {
+
+        }
+
+        else if (val === "C") {
+            return "0";
+        }
+
+        return this.state.input;
     }
 
     handeNewInput(val) {

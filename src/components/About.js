@@ -10,11 +10,11 @@ class About extends Component {
               <br /><br />
               I began teaching my self how to program in 9th grade and have since worked on both solo and group projects across multiple platforms. I'm currently a Junior at UMD College Park class of winter 2021 majoring in Computer Science and minoring in Business (Innovation / Entrepreneurship).
               <br /><br />
-              I have experience in many different kinds of programming languages including Python, Java, JavaScript, C, OCaml, and more. I can pick up new languages easily wether they be dynamic or static, imperative or declarative.
+              I have experience in many different kinds of programming languages including Python, Java, JavaScript, C, OCaml, and more. I can pick up new languages easily whether they are dynamic or static, imperative or declarative.
               <br /><br />
               I have experience working in Agile environments including experience with daily standups and scrum via tools such as JIRA and Confluence. I have worked on CI/CD and edited Jenkins pipelines that help developers test and run code.
               <br /><br />
-              I have worked with many different software tools ranging from standard everyday tools like Microsoft Office and Google Suites to development tools such as Unity for game dev, Django and React for web dev, Git for source control, Kali for pentesting, and more.
+              I have worked with many different software tools ranging from standard everyday tools like Microsoft Office and Google Suite to development tools such as Unity for game development, Django and React for web development, Git for source control, Kali for pentesting, and more.
               </p>
             </main>
         </div>
