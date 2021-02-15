@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 
 class KeyPad extends Component {
+
+    handleButtonPress(val) {
+        this.props.onButtonPress(val);
+    }
+
     render() {
       return (
         <div className="KeyPad">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-1 mb-4">
-                        <button name="%" class="btn btn-dark" style={{ fontSize: "30px", height: "75px", width: "75px" }} >%</button>
+                        <button name="%" class="btn btn-dark" style={{ fontSize: "30px", height: "75px", width: "75px" }} onClick={this.handleButtonPress("%")}>%</button>
                     </div>
                     <div class="col-md-1 mb-4">
                         <button name="CE" class="btn btn-dark" style={{ fontSize: "30px", height: "75px", width: "75px" }} >CE</button>
