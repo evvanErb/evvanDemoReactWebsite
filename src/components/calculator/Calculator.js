@@ -9,52 +9,106 @@ class Calculator extends Component {
         super(props)
 
         this.handeNewInput = this.handeNewInput.bind(this)
-        this.state = {input: "0"};
+        this.state = {result: "0"};
+        this.lastOp = "";
+        this.lastVal = "0";
+        this.currentVal = "0";
+        this.lastPressedWasOp = false;
       }
 
     calculate(val) {
 
-        if (/^\d+$/.test(val) || val === "+" || val === "-" || val === "*" || val === "/") {
-            if (this.state.input === "0") {
-                return val;
+        try {
+
+            if (/^\d+$/.test(val)) {
+                if (this.lastPressedWasOp) {
+                    this.currentVal = val;
+                    this.lastPressedWasOp = false;
+                    return this.currentVal;
+                }
+                else {
+                    if (this.currentVal === "0") {
+                        this.currentVal = val;
+                        return this.currentVal;
+                    }
+                    else {
+                        this.currentVal += val;
+                        return this.currentVal;
+                    }
+                }
             }
-            else {
-                return this.state.input + val;
+
+            else if (val === ".") {
+                this.currentVal += ".";
+                return this.currentVal;
             }
+
+            else if (val === "+" || val === "-" || val === "*" || val === "/") {
+                this.lastPressedWasOp = true;
+                if (this.lastOp === "") {
+                    this.lastVal = this.currentVal;
+                    this.lastOp = val;
+                    return this.currentVal;
+                }
+                else {
+                    this.lastVal = eval(this.lastVal + this.lastOp + this.currentVal).toString();
+                    this.lastOp = val;
+                    this.currentVal = "0";
+                    return this.lastVal;
+                }
+            }
+
+            else if (val === "=") {
+                this.lastPressedWasOp = true;
+                this.currentVal = eval(this.lastVal + this.lastOp + this.currentVal).toString();
+                this.lastVal = "0";
+                this.lastOp = "";
+                return this.currentVal;
+            }
+
+            else if (val === "CE") {
+                this.lastPressedWasOp = false;
+                this.lastVal = "0";
+                this.currentVal = "0";
+                this.lastOp = "";
+                return "0";
+            }
+
+            else if (val === "%") {
+                this.currentVal = eval(this.currentVal + " / 100").toString()
+                return this.currentVal;
+            }
+
+            else if (val === "+/-") {
+                this.currentVal = eval("-1 * " + this.currentVal).toString()
+                return this.currentVal;
+            }
+
+            else if (val === "C") {
+                this.currentVal = "0";
+                return "0";
+            }
+
+            return this.currentVal;
         }
-
-        else if (val === "=") {
-            return eval(this.state.input).toString();
+        catch (error){
+            this.lastPressedWasOp = false;
+            this.lastVal = "0";
+            this.currentVal = "0";
+            this.lastOp = "";
+            return "ERROR";
         }
-
-        else if (val === "CE") {
-            return "0";
-        }
-
-        else if (val === "%") {
-
-        }
-
-        else if (val === "+/-") {
-
-        }
-
-        else if (val === "C") {
-            return "0";
-        }
-
-        return this.state.input;
     }
 
     handeNewInput(val) {
         var value = this.calculate(val);
-        this.setState({input: value});
+        this.setState({result: value});
     }
 
   render() {
       return (
-        <div className="Calculator">
-            <Result value={this.state.input}/>
+        <div className="Calculator" >
+            <Result value={this.state.result}/>
             <KeyPad onButtonPress={this.handeNewInput} />
         </div>
       );
