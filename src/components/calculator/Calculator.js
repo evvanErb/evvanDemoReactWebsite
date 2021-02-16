@@ -51,6 +51,7 @@ class Calculator extends Component {
                     return this.currentVal;
                 }
                 else {
+                    // eslint-disable-next-line
                     this.lastVal = eval(this.lastVal + this.lastOp + this.currentVal).toString();
                     this.lastOp = val;
                     this.currentVal = "0";
@@ -60,6 +61,7 @@ class Calculator extends Component {
 
             else if (val === "=") {
                 this.lastPressedWasOp = true;
+                // eslint-disable-next-line
                 this.currentVal = eval(this.lastVal + this.lastOp + this.currentVal).toString();
                 this.lastVal = "0";
                 this.lastOp = "";
@@ -75,11 +77,13 @@ class Calculator extends Component {
             }
 
             else if (val === "%") {
+                // eslint-disable-next-line
                 this.currentVal = eval(this.currentVal + " / 100").toString()
                 return this.currentVal;
             }
 
             else if (val === "+/-") {
+                // eslint-disable-next-line
                 this.currentVal = eval("-1 * " + this.currentVal).toString()
                 return this.currentVal;
             }

@@ -9,12 +9,12 @@ const NavBar = props => {
 
   return (
     <div className="NavBar" >
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded" >
-          <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
-            <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark rounded" >
+          <button className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarsExample09">
+          <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarsExample09">
               <div className="navbar-nav mx-auto">
                 <HashLink className="navbar-brand" to="/#app">
                     Evvan Erb's Site
